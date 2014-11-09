@@ -95,4 +95,91 @@ public class Lab11adham {
         
         
                  
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                
+% Uppgift1
+ r = 4
+ A = pi*r^2
+
+%% 
+% Uppgift2
+ x = 0:0.1:4*pi ;
+ f = sin(x)+0.3*sin(5*x) ;
+% plot ritar upp grafen för alla angivna x värden.
+ plot (x,f)
+
+%%  
+% EXEMPEL 3
+% Rita graferna av f(x) = sin(x) och g(x) = sin(4x) f¨or 0 ? x ? 2?. 
+% S¨att rubrik och text pa axlarna
+
+x = linspace(0 ,2*pi); % linspace gör så att vi får 100 punkter
+                       % mellan 0 till 2pi, finare graf.
+f = sin(x);
+g = sin(4*x);
+plot (x,f,'green',x,g,'red') % f(x) görs gröön och g(x) görs röd.
+xlabel('x') % namnger x och y lederna.
+ylabel('y')
+title('sin(x) och sin(4x)') % Anger titeln på grafen.
+grid on
+
+%% 
+% Uppgift3
+s = 0;
+for i = 1:5       % Talen 1 till 5.
+    s = s+i^2;    % Tar summan av 1^2 plus 2^2 ända till 5^2. 
+end 
+disp('summan är') % "display" -> visar texten "summan är"
+disp(s)           % följt av s som är summan. 
+
+%% 
+% Uppgift4
+% Skriven i två separata filer. "kladdkaka" oh "nollstallen".
+
+%% 
+% Uppgift 5
+%% y = linspace(x1,x2, N) osv. 
+% Default är 100 punkter.
+
+%% 
+% Grafritning
+% 
+
+
+
+
+% Nollställen
+
+x = linspace(-2, 2);
+y=kladdkaka(x);
+plot(x,y)
+grid on
+%% Nollställe 1
+
+x=fzero(@kladdkaka,1) 
+disp('Nollställe ett är')
+disp(x)
+
+%% Nollställe 2
+
+x=fzero(@kladdkaka,-1)
+disp('Nollställe två är')
+disp (x)
+
+
+
+
+% Funktion namn och funktion. 
+function y=kladdkaka(x)
+y=x.^2-cos(x);
+
+
                 
